@@ -49,6 +49,10 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M7</version>
                     <configuration>
+                        <includes>
+                            <include>**/MySqlTest1.java</include>
+                            <include>**/MySqlTest2.java</include>
+                        </includes>
                         <excludes>
                             <exclude>**/BaseMySqlTest.java</exclude>
                         </excludes>

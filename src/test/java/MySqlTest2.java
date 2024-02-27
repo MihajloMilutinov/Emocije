@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
 
-public class MySqlTest1 extends BaseMySqlTest{
+public class MySqlTest2 extends BaseMySqlTest{
     @BeforeAll
-    static void init1(){
+    static void init2(){
         setDataDumpMySqlFile("emocije1_data_dump.sql");
         setEmptyDumpMySqlFile("emocije1_drop_dump.sql");
         emptyData();
@@ -15,7 +15,7 @@ public class MySqlTest1 extends BaseMySqlTest{
 
     @Test
     void test() throws SQLException {
-        statement.executeUpdate("INSERT INTO emocije VALUES(NULL,'Radost','Prije nego što krenete tražiti sreću, provjerite - možda ste već sretni. Sreća je mala, obična i neupadljiva, i mnogi ju ne znaju vidjeti. - Duško Radović ')");
+        statement.executeUpdate("DELETE FROM emocije WHERE Id=4;");
     }
 
     @AfterAll
