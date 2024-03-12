@@ -10,8 +10,14 @@ import org.springframework.core.env.Environment;
 public class BeanFactory {
 
     @Autowired
-    Environment env;
+    private Environment env;
 
     @Bean
-    public DatabaseConfiguration factoryDBConfig(){}
+    public DatabaseConfiguration factoryDBConfig(){
+        DatabaseConfiguration config = new DatabaseConfiguration();
+        config.setUrl(env.getProperty("database.url"));
+        config.setUser(env.getProperty("database.user"));
+        config.setPass(env.getProperty("database.pass"));
+        return config;
+    }
 }

@@ -1,2 +1,5 @@
+org\etsntesla\it\spring\MySqlManagerBean.class
+org\etsntesla\it\spring\BeanFactory.class
+org\etsntesla\it\spring\DatabaseConfiguration.class
 org\etsntesla\it\Main.class
 org\etsntesla\it\MySqlManager.class
